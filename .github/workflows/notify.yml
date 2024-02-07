@@ -1,0 +1,20 @@
+name: Nofity
+
+on: 
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository provenance'
+        type: string
+        required: true
+      version:
+        description: 'Version release'
+        type: string
+        required: true
+
+jobs:
+  notifty:
+    - name: Send mail
+      uses: dawidd6/action-send-mail@v3
+      with:
+        
